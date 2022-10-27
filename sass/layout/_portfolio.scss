@@ -1,25 +1,24 @@
-.portfolio-list .title {
-    margin-bottom: 4px;
-    color: var(--title-text-color);
-    font-weight: 700;
-    font-size: 18px;
-    line-height: 2;
-    letter-spacing: 0.06em;
-}
-
-.portfolio-list .text {
-    line-height: 1.87;
-    letter-spacing: 0.03em;
-    color: var(--primary-text-color);
-}
-
-
 .portfolio-list {
     display: flex;
     flex-wrap: wrap;
     column-gap: 30px;
     row-gap: 30px;
     margin: 0px;
+
+    & .title {
+        margin-bottom: 4px;
+        color: var(--title-text-color);
+        font-weight: 700;
+        font-size: 18px;
+        line-height: 2;
+        letter-spacing: 0.06em;
+            }
+
+    & .text {
+        line-height: 1.87;
+        letter-spacing: 0.03em;
+        color: var(--primary-text-color);
+            }
 }
 
 .portfolio-description {
@@ -35,7 +34,7 @@
 
 .portfolio-list-link {
     display: block;
-    transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    transition: box-shadow var(--transition-dur);
     text-decoration: none;
 
     &:hover,
@@ -65,10 +64,11 @@
     color: rgba(255, 255, 255, 1);
     overflow: auto;
     transform: translateY(100%);
-    transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    transition: transform var(--transition-dur);
+
+        .portfolio-list-link:hover &,
+        .portfolio-list-link:focus & {
+            transform: translateY(0%);
+                                    }
 }
 
-.portfolio-list-link:hover .overlay,
-.portfolio-list-link:focus .overlay {
-    transform: translateY(0%);
-}

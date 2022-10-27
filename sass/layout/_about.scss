@@ -11,21 +11,26 @@
 .about-list {
     display: flex;
     column-gap: 30px;
+
+        & .img {
+            width: 270px;
+                }
+
+        & .title {
+            margin-bottom: 10px;
+            color: var(--title-text-color);
+            font-weight: 700;
+            font-size: 14px;
+            line-height: 1.14;
+                }
+
+        & .text {
+            font-size: 14px;
+            line-height: 1.71;
+                }
 }
 
-.about-list .item {
-    width: 270px;
-}
 
-.about-list .title {
-    margin-bottom: 10px;
-    color: var(--title-text-color);
-    font-weight: 700;
-    font-size: 14px;
-    line-height: 1.14;
-}
 
-.about-list .text {
-    font-size: 14px;
-    line-height: 1.71;
-}
+
+
