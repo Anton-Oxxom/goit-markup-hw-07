@@ -199,6 +199,9 @@ body {
 .site-nav .link:hover, .site-nav .link:focus {
   color: var(--accent-color);
 }
+.site-nav .link.current {
+  color: var(--accent-color);
+}
 .site-nav .link.current::after {
   display: block;
   content: "";
